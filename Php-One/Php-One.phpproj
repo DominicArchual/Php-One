@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>Php_One</Name>
+    <ProjectGuid>2a160535-0865-4afe-8685-f34100ef0994</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Php_One</RootNamespace>
+    <ProjectTypeGuids>{A0786B88-2ADB-4C21-ABE8-AA2D79766269}</ProjectTypeGuids>
+    <AssemblyName>Php-One</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <IncludeDebugInformation>true</IncludeDebugInformation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <IncludeDebugInformation>false</IncludeDebugInformation>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="bin\System.php" />
+    <Compile Include="bin\System.View.php" />
+    <Compile Include="bin\System.Route.php" />
+    <Compile Include="controllers\HomeController.php" />
+    <Compile Include="index.php" />
+    <Compile Include="interfaces\IDbSet.php" />
+    <Compile Include="models\Movies.php" />
+    <Compile Include="models\DbContext.php" />
+    <Compile Include="models\Movie.php" />
+    <Compile Include="views\home\contact.php" />
+    <Compile Include="views\home\about.php" />
+    <Compile Include="views\home\index.php" />
+    <Compile Include="views\_Layout.php" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="content\css\" />
+    <Folder Include="controllers\" />
+    <Folder Include="models\" />
+    <Folder Include="bin\" />
+    <Folder Include="interfaces\" />
+    <Folder Include="content\" />
+    <Folder Include="scripts\" />
+    <Folder Include="views\" />
+    <Folder Include="views\home\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="content\css\bootstrap-theme.css" />
+    <Content Include="content\css\bootstrap-theme.css.map" />
+    <Content Include="content\css\bootstrap-theme.min.css" />
+    <Content Include="content\css\bootstrap.css" />
+    <Content Include="content\css\bootstrap.css.map" />
+    <Content Include="content\css\bootstrap.min.css" />
+    <Content Include="content\css\Styles.css" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="web.config.json" />
+  </ItemGroup>
+</Project>

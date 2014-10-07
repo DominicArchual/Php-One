@@ -1,0 +1,14 @@
+﻿#header .navbar-brand {
+    font-family: georgia, times new, sans-serif;
+    font-weight: bold;
+}
+#header .navbar {
+	border-radius: 0;
+	border-right: 0;
+	border-left: 0;
+}
+#body {
+	margin: 1em;
+}
+h3 { color: #000; text-decoration: underline; }
+	h3 i { margin-right: 5px; }
