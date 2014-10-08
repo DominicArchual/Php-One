@@ -8,7 +8,7 @@ I am calling it Php One because it is my "go to" design when building a new PHP 
 - To introduce PHP developers to the .NET flavored MVC paradigm
 - To introduce ASP.NET developers to PHP syntax in a familiar way
 - Because I don't much like the existing PHP frameworks
-- I like working with .NET's MVC framework; and I have always appreciated the simplicity of PHP, so why not marry the two?
+- I like working with .NET's MVC; and I have always appreciated the simplicity of PHP, so why not marry the two?
 - Barebones MVC is great for building a new app where the scope is uncertain; plus it's just vanilla PHP code so you can change whatever you like!
 
 ### What's with the SLN file?
