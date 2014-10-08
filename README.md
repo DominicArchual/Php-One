@@ -3,8 +3,6 @@ Php-One
 
 ### Why?
 
-There are many reasons I created this project.  They are as follows:
-
 - To introduce PHP developers to the ASP.NET flavored MVC paradigm
 - To introduce ASP.NET developers to PHP syntax
 - Because I have always been dissatisfied with the existing PHP frameworks
