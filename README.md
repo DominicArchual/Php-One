@@ -13,7 +13,7 @@ I am calling it Php One because it is my "go to" design when building a new PHP 
 
 ### What's with the SLN files?
 
-- I am using PHPTools from Devsense (http://www.devsense.com/products/php-tools) since it makes PHP development in VisualStudio almost trivial; however, you don't have you use it if you don't want to.  If you download the source, simply ignore the .sln, .suo, .phpproj, and .phpproj.user files and you'll be fine.
+- I am using a VisualStudio extension called PHPTools (http://www.devsense.com/products/php-tools) since it makes PHP development in VisualStudio almost trivial; however, you don't have you use it if you don't want to.  If you download the source, simply ignore the .sln, .suo, .phpproj, and .phpproj.user files and you'll be fine.
 
 ![Php-One Filesystem](http://i.imgur.com/XPeYnv0.gif "PHP-One Filesystem")
 
