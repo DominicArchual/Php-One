@@ -102,4 +102,8 @@ HTML;
 </ul>
 ```
 
+#### Result:
+
+![Result](http://i.imgur.com/UzFZShT.gif Result)
+
 ... more examples coming soon
