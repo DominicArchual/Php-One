@@ -1,21 +1,36 @@
 <?php
-require_once('/models/DbContext.php');
+require_once('/repositories/MovieRepository.php');
+require_once('/models/MovieViewModel.php');
 
 class HomeController
 {
-	public $DbContext;
-	public $Auth;
+	public $MovieRepo;
 	
 	public function __construct()
 	{
-		//$this->DbContext = new DbContext();
+		$this->MovieRepo = new MovieRepository();
 	}
 	
 	public function Index()
 	{
 		$GLOBALS['ActivePage'] = "Home";
-	
-		View::Render('views/home/index.php');
+        
+        $model = []; // create a variable to store our movies (don't actually need this, but it's nice)
+        
+        $movies = $this->MovieRepo->GetMovies(); // get data from our repo
+
+        // do some transformations and populate our view model
+        foreach ($movies as $movie)
+        {
+            $model[] = new MovieViewModel(
+                $movie->Id,
+                $movie->Title,
+                $movie->IsRRated ? 'R' : 'PG',
+                $movie->ReleaseDate->format('F jS, Y')
+            );
+        }
+
+		View::Render('views/home/index.php', null, $model); // call our view and send the model
 	}
     
     public function About()

@@ -7,10 +7,13 @@ class Movie
 	public $Title = "";
 	public $IsRRated = false;
 	public $ReleaseDate;
-	
-	public function __construct()
-	{
-		$this->ReleaseDate = new DateTime();
+    
+    function __construct($id, $title, $isRRated, $releaseDate) 
+    { 
+        $this->Id = $id;
+        $this->Title = $title;
+        $this->IsRRated = $isRRated;
+		$this->ReleaseDate = $releaseDate ?: new DateTime();
 	}
 }
 ?>

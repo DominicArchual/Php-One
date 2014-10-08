@@ -22,9 +22,11 @@
     <Compile Include="controllers\HomeController.php" />
     <Compile Include="index.php" />
     <Compile Include="interfaces\IDbSet.php" />
+    <Compile Include="models\MovieViewModel.php" />
     <Compile Include="models\Movies.php" />
     <Compile Include="models\DbContext.php" />
     <Compile Include="models\Movie.php" />
+    <Compile Include="repositories\MovieRepository.php" />
     <Compile Include="views\home\contact.php" />
     <Compile Include="views\home\about.php" />
     <Compile Include="views\home\index.php" />
@@ -37,6 +39,7 @@
     <Folder Include="bin\" />
     <Folder Include="interfaces\" />
     <Folder Include="content\" />
+    <Folder Include="repositories\" />
     <Folder Include="scripts\" />
     <Folder Include="views\" />
     <Folder Include="views\home\" />
