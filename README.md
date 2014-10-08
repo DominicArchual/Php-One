@@ -57,7 +57,7 @@ class HomeController
 	
 	public function __construct()
 	{
-		$this->MovieRepo = new MovieRepository();
+		$this->MovieRepo = new MovieRepository(); // create an instance of our repo
 	}
 	
 	public function Index()
