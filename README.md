@@ -62,12 +62,11 @@ class HomeController
 	
 	public function Index()
 	{
-		$GLOBALS['ActivePage'] = "Home";
+        $model = []; // create a variable to store our movies (don't actually need this, but it's nice)
         
-        $model = [];
-        
-        $movies = $this->MovieRepo->GetMovies();
+        $movies = $this->MovieRepo->GetMovies(); // get data from our repo
 
+        // do some transformations and populate our view model
         foreach ($movies as $movie)
         {
             $model[] = new MovieViewModel(
@@ -78,7 +77,7 @@ class HomeController
             );
         }
 
-		View::Render('views/home/index.php', null, $model);
+		View::Render('views/home/index.php', null, $model); // call our view and send the model
 	}
 }
 ```
