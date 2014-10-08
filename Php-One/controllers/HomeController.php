@@ -15,8 +15,6 @@ class HomeController
 	{
 		$GLOBALS['ActivePage'] = "Home";
         
-        $model = []; // create a variable to store our movies (don't actually need this, but it's nice)
-        
         $movies = $this->MovieRepo->GetMovies(); // get data from our repo
 
         // do some transformations and populate our view model
