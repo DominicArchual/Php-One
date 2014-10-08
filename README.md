@@ -17,17 +17,89 @@ I am calling it Php One because it is my "go to" design when building a new PHP 
 
 ![Php-One Filesystem](http://i.imgur.com/XPeYnv0.gif "PHP-One Filesystem")
 
-### Examples:
+### Example:
+
+In this example, we are pulling data from a repository and converting it to a view model in our controller, which then gets passed to our view.
+
+#### Define your view model:
+
+```
+require_once('bin/System.php');
+
+class MovieViewModel
+{
+	public $Id = 0;
+	public $Title = "";
+	public $Rating = '';
+	public $ReleaseDate = '';
+    
+    public function __construct($id, $title, $rating, $releaseDate)
+    {
+        $this->Id = $id;
+        $this->Title = $title;
+        $this->Rating = $rating;
+        $this->ReleaseDate = $releaseDate;
+    }
+}
+```
 
 #### Define your controller:
 
+> Here we are creating a view model based on data retrieved from our repository.  To view the repository code, navigate to /repositories/MovieRepository.php
+
 ```
+require_once('/repositories/MovieRepository.php');
+require_once('/models/MovieViewModel.php');
+
 class HomeController
 {
+	public $MovieRepo;
+	
+	public function __construct()
+	{
+		$this->MovieRepo = new MovieRepository();
+	}
+	
 	public function Index()
 	{
-		View::Render('views/home/index.php');
+		$GLOBALS['ActivePage'] = "Home";
+        
+        $model = [];
+        
+        $movies = $this->MovieRepo->GetMovies();
+
+        foreach ($movies as $movie)
+        {
+            $model[] = new MovieViewModel(
+                $movie->Id,
+                $movie->Title,
+                $movie->IsRRated ? 'R' : 'PG',
+                $movie->ReleaseDate->format('F jS, Y')
+            );
+        }
+
+		View::Render('views/home/index.php', null, $model);
 	}
 }
 ```
+
+#### Define your view:
+
+> The model gets passed to the view and we are using PHP's HEREDOC syntax to display the values in HTML.
+
+```
+<ul class="list-group">
+<?php
+foreach($Model as $movie)
+{
+    echo <<<HTML
+        <li class="list-group-item">
+            <strong>{$movie->Title}</strong> ({$movie->Rating}) - {$movie->ReleaseDate}
+        </li>
+HTML;
+}
+?>
+</ul>
+```
+
 ... more examples coming soon
