@@ -103,7 +103,7 @@ HTML;
 
 #### Result:
 
-> Here it is!  It is also shown in list form thanks to bootstrap!
+> Here it is!  And, it looks good thanks to bootstrap!
 
 ![Result](http://i.imgur.com/UzFZShT.gif Result)
 
