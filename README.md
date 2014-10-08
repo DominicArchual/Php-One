@@ -11,7 +11,7 @@ I am calling it Php One because it is my "go to" design when building a new PHP 
 - I like working with .NET's MVC framework; and I have always appreciated the simplicity of PHP, so why not marry the two?
 - Barebones MVC is great for building a new app where the scope is uncertain; plus it's just vanilla PHP code so you can change whatever you like!
 
-### What's with the SLN files?
+### What's with the SLN file?
 
 - I am using a VisualStudio extension called PHPTools (http://www.devsense.com/products/php-tools) since it makes PHP development in VisualStudio almost trivial; however, you don't have you use it if you don't want to.  If you download the source, simply ignore the .sln, .suo, .phpproj, and .phpproj.user files and you'll be fine.
 
@@ -62,8 +62,6 @@ class HomeController
 	
 	public function Index()
 	{
-        $model = []; // create a variable to store our movies (don't actually need this, but it's nice)
-        
         $movies = $this->MovieRepo->GetMovies(); // get data from our repo
 
         // do some transformations and populate our view model
@@ -102,6 +100,8 @@ HTML;
 ```
 
 #### Result:
+
+> Here it is!  And, it looks good thanks to bootstrap!
 
 ![Result](http://i.imgur.com/UzFZShT.gif Result)
 
