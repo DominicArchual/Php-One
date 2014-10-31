@@ -45,7 +45,7 @@ class MovieViewModel
 
 #### Define your controller:
 
-> Here we are creating a view model based on data retrieved from our repository.  To view the repository code, navigate to /repositories/MovieRepository.php
+> Here we are creating a view model based on data retrieved from our repository.  To view the repository code, navigate to [/repositories/MovieRepository.php](https://github.com/DominicArchual/Php-One/blob/master/Php-One/repositories/MovieRepository.php)
 
 ```
 require_once('/repositories/MovieRepository.php');
