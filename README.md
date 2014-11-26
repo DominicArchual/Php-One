@@ -1,7 +1,7 @@
 Php-One MVC Framework
 =======
 
-I am calling it Php One because it is my "go to" design when building a new PHP app.  I wanted to maintain a consistent design so as not to confuse myself as I write both .NET and PHP code.  The .NET MVC is a very simplistic and idealistic design which I enjoy.  Since I saw the PHP landscape as lacking in this area, I wanted to see if I could create a framework the way I wanted based on my experience with .NET. Check out the [Php One Wiki](https://github.com/DominicArchual/Php-One/wiki/Hello-World)!
+Check out the [Php One Wiki](https://github.com/DominicArchual/Php-One/wiki/Hello-World)!
 
 ### Why?
 
