@@ -5,12 +5,9 @@ Check out the [Php One Wiki](https://github.com/DominicArchual/Php-One/wiki/Hell
 
 ### Why?
 
-- To maintain a consistent design so as not to confuse myself as I write both .NET and PHP code
+- To maintain a consistent design as I write both .NET and PHP code
 - As a learning tool to introduce PHP developers to the .NET flavored MVC paradigm
 - As a learning tool to introduce ASP.NET developers to PHP syntax in a familiar way
-- I am not a fan of existing PHP frameworks
-- I do; however, like working with .NET's MVC; and I have always appreciated the simplicity of PHP, so why not marry the two?
-- Barebones MVC is great for building a new app where the scope is uncertain; plus it's just vanilla PHP code so you can change whatever you like!
 
 ### What's with the SLN file?
 
